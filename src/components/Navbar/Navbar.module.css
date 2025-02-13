@@ -1,13 +1,17 @@
 @import "../../vars.css";
 
 .navbar {
-    position: relative;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 61px;
-    z-index: 2;
-    margin: 0 10%;
+    padding:15px 10%;
+    background: linear-gradient(90deg, var(--color-secondary), var(--color-dark));
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
 .logo {
