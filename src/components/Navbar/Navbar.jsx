@@ -7,6 +7,14 @@ import menuBtn from "../../../assets/menuBtn.png"
 export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({behavior: "smooth"});
+        }
+        setMenuOpen(false);
+    }
+
     return (
         <nav className={styles.navbar}>
             <a className={styles.title} href="/"><img className={styles.logo} src={logo} /></a>
@@ -21,22 +29,19 @@ export const Navbar = () => {
                     onClick={() => setMenuOpen(false)}
                 >
                     <li>
-                        <a href="#Home">Home</a>
+                        <a onClick={()=> scrollToSection("about")}>About</a>
                     </li>
                     <li>
-                        <a href="#about">About</a>
+                        <a onClick={()=> scrollToSection("skills")}>Skills</a>
                     </li>
                     <li>
-                        <a href="#skills">Skills</a>
+                        <a onClick={()=> scrollToSection("projects")}>Projects</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a onClick={()=> scrollToSection("contact")}>Contact</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <li>
-                        <a href="https://drive.google.com/file/d/1dHJMRFRXBQkWZW4WAQ8aQykVTFaVM4Ni/view?usp=drive_link" target="_blank">Resume</a>
+                        <a href="https://drive.google.com/file/d/11ZDrZAOrpLoV3IP8HfoxTjrBASCNpb98/view?usp=sharing" target="_blank">Resume</a>
                     </li>
                 </ul>
             </div>

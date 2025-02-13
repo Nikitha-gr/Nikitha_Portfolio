@@ -7,8 +7,21 @@ function App() {
   return (
     <div className={styles.App}>
       <Navbar />
-      <Hero />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
       <About />
+      </section>
+      <section id="skills">
+
+      </section>
+      <section id="projects">
+        
+      </section>
+      <section id="contact">
+        
+      </section>
     </div>
   )
 

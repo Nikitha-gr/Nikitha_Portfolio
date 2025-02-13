@@ -37,6 +37,9 @@
 }
 
 .contactBtn {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
     text-decoration: none;
     background-color: var(--color-primary);
     color: var(--color-text);
@@ -45,6 +48,11 @@
     font-weight: 600;
     padding: 17px 26px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.contactBtn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .heroImg {

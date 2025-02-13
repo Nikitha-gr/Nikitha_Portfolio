@@ -37,9 +37,16 @@
 }
 
 .menuItems a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
     font-size: 25px;
     color: var(--color-text);
     text-decoration: none;
+}
+
+.menuItems a:hover {
+    cursor: pointer;
+    transform: scale(1.2);
 }
 
 @media screen and (max-width:780px) {
