@@ -1,5 +1,5 @@
 import styles from "./Hero.module.css"
-import Nikitha_Photo from "../../../assets/Nikitha_Photo.png"
+import Nikitha_Photo from "../../assets/Nikitha_Photo.png"
 export const Hero = () => {
     return (
         <section className={styles.container}>

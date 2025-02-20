@@ -1,0 +1,68 @@
+@import "../../vars.css";
+
+.container {
+    color: var(--color-text);
+    margin-top: 79px;;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color-text);
+    z-index: 1;
+}
+
+.title {
+    /* display: inline-block; */
+    text-align: center;
+    font-size: 62px;
+    font-weight: 900;
+    margin-bottom: 33px;
+    font-family: var(--font-roboto);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+}
+
+.imgDiv {
+    background-color: var(--color-secondary);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+}
+
+.logoImg {
+    width: 100px;
+}
+
+.description {
+    font-size: 30px;
+    font-family: var(--font-roboto);
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 780px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        align-items: center;
+    }
+}
