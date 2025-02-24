@@ -44,7 +44,7 @@ export const Navbar = () => {
                         <a onClick={()=> scrollToSection("contact")}>Contact</a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1u-yikji83rVXkY5PlHOdMfv9gQIettld/view?usp=sharing" target="_blank">Resume</a>
+                        <a href="https://drive.google.com/file/d/1kYwmmIYcY7SxI9TxJaEHCAcV5O7lwGAO/view?usp=sharing" target="_blank">Resume</a>
                     </li>
                 </ul>
             </div>
