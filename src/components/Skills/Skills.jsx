@@ -19,10 +19,10 @@ export const Skills = () => {
         <section className={`${styles.container} ${isVisible ? styles.fadeIn : ""}`}>
             <h1 className={styles.title}>Skills</h1>
             <div className={styles.content}>
-                {[ 
-                    { img: HTML_logo, name: "HTML" }, 
-                    { img: CSS_logo, name: "CSS" }, 
-                    { img: JavaScript_logo, name: "JavaScript" }, 
+                {[
+                    { img: HTML_logo, name: "HTML" },
+                    { img: CSS_logo, name: "CSS" },
+                    { img: JavaScript_logo, name: "JavaScript" },
                     { img: React_logo, name: "React" }
                 ].map((skill, index) => (
                     <div key={index} className={styles.skill} style={{ animationDelay: `${index * 200}ms` }}>
@@ -33,6 +33,8 @@ export const Skills = () => {
                     </div>
                 ))}
             </div>
+            <div className={styles.topBlur} />
+            <div className={styles.bottomBlur} />
         </section>
     );
 };

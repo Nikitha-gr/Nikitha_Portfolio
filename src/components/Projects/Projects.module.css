@@ -118,6 +118,32 @@
     color: white;
 }
 
+.topBlur {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    min-width: 350px;
+    top: -100px;
+    left: -10vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(241, 91, 181, 0.4), rgba(155, 93, 229, 0.2));
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.bottomBlur {
+    position: absolute;
+    width: 60vw;
+    height: 50vw;
+    min-width: 250px;
+    top: 250px;
+    right: -20vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(155, 93, 229, 0.3), rgba(241, 91, 181, 0.2));
+    filter: blur(120px);
+    z-index: 0;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
     .title {

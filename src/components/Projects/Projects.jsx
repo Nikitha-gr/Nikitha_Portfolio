@@ -14,7 +14,7 @@ export const Projects = () => {
                     a newsletter subscription form 📬, a cart feature 🛒, and categorized sections for products under $50 💵,
                     under $100 💰, and for kids 🧸.
                 </p>
-                
+
                 <div className={styles.content}>
                     <img src={Seara_Project} alt="Seara Project Homepage" className={styles.projectImg} />
                 </div>
@@ -35,6 +35,8 @@ export const Projects = () => {
                     </a>
                 </div>
             </div>
+            <div className={styles.topBlur} />
+            <div className={styles.bottomBlur} />
         </section>
     );
 };
