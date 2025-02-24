@@ -2,6 +2,7 @@ import styles from "./App.module.css"
 import { About } from "./components/About/About"
 import { Hero } from "./components/Hero/Hero"
 import { Navbar } from "./components/Navbar/Navbar"
+import { Projects } from "./components/Projects/Projects"
 import { Skills } from "./components/Skills/Skills"
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Skills />
       </section>
       <section id="projects">
-
+      <Projects/>
       </section>
       <section id="contact">
 
