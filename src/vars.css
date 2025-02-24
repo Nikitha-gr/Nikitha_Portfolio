@@ -1,11 +1,15 @@
 :root {
-    /* Colors */
-    --color-text: #fff;
-    --color-primary: #576cbc;
-    --color-secondary: #19376d;
-    --color-dark: #0b2447;
-    --color-bg: #04152d;
+    --color-text: #EDE9FE; 
+    --color-primary: #9B5DE5;
+    --color-secondary: #F15BB5;
+    --color-dark: #3A0CA3;
+    --color-bg: #201A3A;
+    --color-bg-secondary: #3F2E56;
+
+    /* Gradient */
+    --color-gradient: linear-gradient(135deg, #F15BB5 0%, #9B5DE5 100%);
 
     /* Fonts */
-    --font-roboto: "Roboto";
+    --font-roboto: "Roboto", sans-serif;
+    --font-heading: "Poppins", sans-serif;
 }

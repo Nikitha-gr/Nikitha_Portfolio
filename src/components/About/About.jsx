@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./About.module.css"
 
 export const About = () => {
@@ -22,6 +23,7 @@ export const About = () => {
                 </p>
             </div>
             <div className={styles.topBlur} />
+            <div className={styles.bottomBlur} />
         </section>
     )
 }

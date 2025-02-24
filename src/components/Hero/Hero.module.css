@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 49px;
     z-index: 1;
     padding-top: 5%;
     margin-left: 10%;
@@ -23,20 +22,22 @@
 
 .title {
     display: inline-block;
-    font-size: 60px;
+    font-size: 56px;
     font-weight: 900;
     margin-bottom: 33px;
-    font-family: var(--font-roboto);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
+    font-family: var(--font-heading);
+    background: var(--color-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .description {
-    font-size: 30px;
+    font-size: 28px;
     font-family: var(--font-roboto);
-    margin-bottom: 52px;
+    opacity: 0.9;
+    margin-bottom: 45px;
+    line-height: 1.5;
 }
 
 .contactBtn {
@@ -44,18 +45,19 @@
     position: relative;
     z-index: 10;
     text-decoration: none;
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    border-radius: 100px;
-    font-size: 30px;
+    background: var(--color-gradient);
+    color: white;
+    border-radius: 50px;
+    font-size: 22px;
     font-weight: 600;
-    padding: 17px 26px;
+    padding: 15px 30px;
+    transition: all 0.3s ease-in-out;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .contactBtn:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 15px 40px rgba(171, 92, 220, 0.6);
 }
 
 .heroImg {
@@ -63,24 +65,12 @@
     border-radius: 50%;
     z-index: 1;
 
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    animation: floating 4s infinite ease-in-out;
 }
 
 @keyframes floating {
-    0% {
-        transform: translate(0, 0px);
-    }
-
-    50% {
-        transform: translate(0, 10px);
-    }
-
-    100% {
-        transform: translate(0, -0px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
 }
 
 .topBlur {
@@ -88,33 +78,46 @@
     width: 50vw;
     height: 50vw;
     min-width: 350px;
-    top: -128px;
+    top: -100px;
     left: -10vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 100, 0.7);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(241, 91, 181, 0.4), rgba(155, 93, 229, 0.2));
     filter: blur(100px);
     z-index: 0;
 }
 
 .bottomBlur {
     position: absolute;
-    width: 70vw;
+    width: 60vw;
     height: 50vw;
     min-width: 250px;
-    top: 246px;
-    right: -25vw;
-    border-radius: 764px;
-    background: rgba(25, 55, 100, 0.7);
-    filter: blur(100px);
+    top: 250px;
+    right: -20vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(155, 93, 229, 0.3), rgba(241, 91, 181, 0.2));
+    filter: blur(120px);
     z-index: 0;
 }
 
 @media screen and (max-width: 780px) {
     .container {
         flex-direction: column-reverse;
+        text-align: center;
     }
 
     .content {
         align-items: center;
+    }
+
+    .title {
+        font-size: 48px;
+    }
+
+    .description {
+        font-size: 24px;
+    }
+
+    .heroImg {
+        width: 60%;
     }
 }

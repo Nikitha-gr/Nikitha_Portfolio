@@ -1,33 +1,56 @@
 @import "../../vars.css";
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .container {
     color: var(--color-text);
-    margin-top: 79px;;
+    margin-top: 79px;
     margin-left: 10%;
     margin-right: 10%;
+    text-align: center;
+}
+
+.title {
+    font-size: 62px;
+    font-weight: 900;
+    margin-bottom: 33px;
+    font-family: var(--font-roboto);
+    background: linear-gradient(90deg, rgba(243, 232, 255, 1) 70%, rgba(243, 232, 255, 0) 120%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
 }
 
 .content {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     justify-content: space-evenly;
     color: var(--color-text);
     z-index: 1;
-}
-
-.title {
-    /* display: inline-block; */
-    text-align: center;
-    font-size: 62px;
-    font-weight: 900;
-    margin-bottom: 33px;
-    font-family: var(--font-roboto);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 120%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .skill {
@@ -35,16 +58,25 @@
     flex-direction: column;
     align-items: center;
     gap: 11px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .imgDiv {
-    background-color: var(--color-secondary);
+    background: linear-gradient(145deg, #A855F7, #EC4899);
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 170px;
     height: 170px;
+    box-shadow: 0px 10px 30px rgba(162, 28, 175, 0.6);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.imgDiv:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 40px rgba(162, 28, 175, 0.8);
 }
 
 .logoImg {
@@ -55,14 +87,35 @@
     font-size: 30px;
     font-family: var(--font-roboto);
     margin-bottom: 40px;
+    color: #F3E8FF;
+    transition: transform 0.3s ease-in-out;
 }
 
+.skill:hover .description {
+    transform: scale(1.1);
+}
+
+/* Responsive */
 @media screen and (max-width: 780px) {
-    .container {
-        flex-direction: column;
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
-    .content {
-        align-items: center;
+    .title {
+        font-size: 45px;
+    }
+
+    .description {
+        font-size: 22px;
+    }
+
+    .imgDiv {
+        width: 140px;
+        height: 140px;
+    }
+
+    .logoImg {
+        width: 80px;
     }
 }

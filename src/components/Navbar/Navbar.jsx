@@ -17,7 +17,7 @@ export const Navbar = () => {
 
     return (
         <nav className={styles.navbar}>
-            <a className={styles.title} href="/"><img className={styles.logo} src={logo} /></a>
+            <img className={styles.logo} src={logo} />
             <div className={styles.menu}>
                 <img
                     className={styles.menuBtn}
@@ -28,6 +28,9 @@ export const Navbar = () => {
                 <ul className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
                     onClick={() => setMenuOpen(false)}
                 >
+                    <li>
+                        <a onClick={()=> scrollToSection("hero")}>Home</a>
+                    </li>
                     <li>
                         <a onClick={()=> scrollToSection("about")}>About</a>
                     </li>
@@ -41,7 +44,7 @@ export const Navbar = () => {
                         <a onClick={()=> scrollToSection("contact")}>Contact</a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/11ZDrZAOrpLoV3IP8HfoxTjrBASCNpb98/view?usp=sharing" target="_blank">Resume</a>
+                        <a href="https://drive.google.com/file/d/1u-yikji83rVXkY5PlHOdMfv9gQIettld/view?usp=sharing" target="_blank">Resume</a>
                     </li>
                 </ul>
             </div>

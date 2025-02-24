@@ -1,3 +1,5 @@
+import React from "react";
+import { useEffect, useState } from "react";
 import styles from "./Skills.module.css";
 import HTML_logo from "../../assets/HTML_logo.png";
 import CSS_logo from "../../assets/CSS_logo.png";
@@ -5,35 +7,32 @@ import JavaScript_logo from "../../assets/JavaScript_logo.png";
 import React_logo from "../../assets/React_logo.png";
 
 export const Skills = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsVisible(true);
+        }, 300);
+    }, []);
+
     return (
-        <section className={styles.container}>
+        <section className={`${styles.container} ${isVisible ? styles.fadeIn : ""}`}>
             <h1 className={styles.title}>Skills</h1>
             <div className={styles.content}>
-                <div className={styles.skill}>
-                    <div className={styles.imgDiv}>
-                        <img src={HTML_logo} alt="HTML Logo" className={styles.logoImg} />
+                {[ 
+                    { img: HTML_logo, name: "HTML" }, 
+                    { img: CSS_logo, name: "CSS" }, 
+                    { img: JavaScript_logo, name: "JavaScript" }, 
+                    { img: React_logo, name: "React" }
+                ].map((skill, index) => (
+                    <div key={index} className={styles.skill} style={{ animationDelay: `${index * 200}ms` }}>
+                        <div className={styles.imgDiv}>
+                            <img src={skill.img} alt={`${skill.name} Logo`} className={styles.logoImg} />
+                        </div>
+                        <p className={styles.description}>{skill.name}</p>
                     </div>
-                    <p className={styles.description}>HTML</p>
-                </div>
-                <div className={styles.skill}>
-                    <div className={styles.imgDiv}>
-                        <img src={CSS_logo} alt="CSS Logo" className={styles.logoImg} />
-                    </div>
-                    <p className={styles.description}>CSS</p>
-                </div>
-                <div className={styles.skill}>
-                    <div className={styles.imgDiv}>
-                        <img src={JavaScript_logo} alt="JavaScript Logo" className={styles.logoImg} />
-                    </div>
-                    <p className={styles.description}>JavaScript</p>
-                </div>
-                <div className={styles.skill}>
-                    <div className={styles.imgDiv}>
-                        <img src={React_logo} alt="React Logo" className={styles.logoImg} />
-                    </div>
-                    <p className={styles.description}>React</p>
-                </div>
+                ))}
             </div>
         </section>
-    )
-}
+    );
+};
