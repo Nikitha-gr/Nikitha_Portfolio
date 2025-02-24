@@ -62,9 +62,11 @@
 
 .heroImg {
     width: 40%;
+    height: auto;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     z-index: 1;
-
+    object-fit: cover;
     animation: floating 4s infinite ease-in-out;
 }
 

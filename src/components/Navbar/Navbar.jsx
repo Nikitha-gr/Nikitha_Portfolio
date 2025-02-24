@@ -10,7 +10,7 @@ export const Navbar = () => {
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
-            section.scrollIntoView({behavior: "smooth"});
+            section.scrollIntoView({ behavior: "smooth" });
         }
         setMenuOpen(false);
     }
@@ -29,22 +29,32 @@ export const Navbar = () => {
                     onClick={() => setMenuOpen(false)}
                 >
                     <li>
-                        <a onClick={()=> scrollToSection("hero")}>Home</a>
+                        <a onClick={() => scrollToSection("hero")}>Home</a>
                     </li>
                     <li>
-                        <a onClick={()=> scrollToSection("about")}>About</a>
+                        <a onClick={() => scrollToSection("about")}>About</a>
                     </li>
                     <li>
-                        <a onClick={()=> scrollToSection("skills")}>Skills</a>
+                        <a onClick={() => scrollToSection("skills")}>Skills</a>
                     </li>
                     <li>
-                        <a onClick={()=> scrollToSection("projects")}>Projects</a>
+                        <a onClick={() => scrollToSection("projects")}>Projects</a>
                     </li>
                     <li>
-                        <a onClick={()=> scrollToSection("contact")}>Contact</a>
+                        <a onClick={() => scrollToSection("contact")}>Contact</a>
                     </li>
                     <li>
-                        <a href="https://drive.google.com/file/d/1kYwmmIYcY7SxI9TxJaEHCAcV5O7lwGAO/view?usp=sharing" target="_blank">Resume</a>
+                        <a href="https://drive.google.com/file/d/19OE7l2XasZnD-LKwOcwz8krcFWD_Gj_A/view?usp=drive_link" target="_blank" rel="noopener noreferrer"
+                             onClick={(e) => {
+                                e.preventDefault(); 
+                                window.open("https://drive.google.com/file/d/19OE7l2XasZnD-LKwOcwz8krcFWD_Gj_A/view?usp=sharing", "_blank");
+                                setTimeout(() => {
+                                    window.location.href = "https://drive.google.com/uc?export=download&id=19OE7l2XasZnD-LKwOcwz8krcFWD_Gj_A";
+                                }, 1000);
+                            }}
+                            >
+                            Resume
+                        </a>
                     </li>
                 </ul>
             </div>
