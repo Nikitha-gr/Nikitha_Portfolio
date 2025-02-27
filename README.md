@@ -19,7 +19,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 ## 📬 Contact  
 If you have any questions or feedback, feel free to reach out:  
 📧 Email: [nikitha14.gr@gmail.com]  
-🔗 LinkedIn: [Your LinkedIn Profile]  
+🔗 LinkedIn: [https://www.linkedin.com/in/nikitha-gopalakrishna/]  
 
 ---
 
