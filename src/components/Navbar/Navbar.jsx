@@ -47,7 +47,7 @@ export const Navbar = () => {
                         <a href="https://drive.google.com/file/d/1-gJIoInr0DO1h-I7kB8zk7UfTPIyFMam/view?usp=sharing" target="_blank" rel="noopener noreferrer"
                              onClick={(e) => {
                                 e.preventDefault(); 
-                                window.open("https://drive.google.com/file/d/19OE7l2XasZnD-LKwOcwz8krcFWD_Gj_A/view?usp=sharing", "_blank");
+                                window.open("https://drive.google.com/file/d/1-gJIoInr0DO1h-I7kB8zk7UfTPIyFMam/view?usp=drive_link", "_blank");
                                 setTimeout(() => {
                                     window.location.href = "https://drive.google.com/uc?export=download&id=19OE7l2XasZnD-LKwOcwz8krcFWD_Gj_A";
                                 }, 1000);
